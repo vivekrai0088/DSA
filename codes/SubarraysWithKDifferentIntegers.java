@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+// https://leetcode.com/problems/subarrays-with-k-different-integers/
 public class SubarraysWithKDifferentIntegers {
   public int subarraysWithKDistinct(int[] nums, int k) {
     return subarraysWithAtmostK(nums, k) - subarraysWithAtmostK(nums, k - 1);
