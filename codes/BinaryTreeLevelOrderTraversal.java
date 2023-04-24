@@ -1,13 +1,19 @@
-import javax.swing.tree.TreeNode;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 
-https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+// https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+
 
 public class BinaryTreeLevelOrderTraversal {
+  class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+  }
   public List<List<Integer>> levelOrder(TreeNode root) {
     if(root == null) return new ArrayList<>(Arrays.asList());
     Queue<TreeNode> queue = new ArrayDeque<>();
