@@ -1,24 +1,32 @@
-
-
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
+
 public class BinaryTreeMaximumPathSum {
   class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
   }
-  private int maxi = 0;
-  private int maxPathSumUtil(TreeNode root) {
-    if(root == null) return 0;
-    int leftChildMaxPathSum = Math.max(0, maxPathSumUtil(root.left));
-    int rightChildMaxPathSum = Math.max(0, maxPathSumUtil(root.right));
 
-    maxi = Math.max(maxi, leftChildMaxPathSum + root.val + rightChildMaxPathSum);
-    return leftChildMaxPathSum + root.val + rightChildMaxPathSum;
+  int ans = Integer.MIN_VALUE;
+
+  private int maxPathSumHelper(TreeNode root) {
+    if(root == null) return 0;
+
+    int leftPathSum = maxPathSumHelper(root.left);
+    int rightPathSum = maxPathSumHelper(root.right);
+
+    int maxPath = root.val;
+    maxPath = Math.max(maxPath, maxPath + leftPathSum);
+    maxPath = Math.max(maxPath, maxPath + rightPathSum);
+
+    ans = Math.max(ans, maxPath);
+    return Math.max(root.val, root.val + Math.max(leftPathSum, rightPathSum));
   }
 
   public int maxPathSum(TreeNode root) {
-    int pseudo = maxPathSumUtil(root);
-    return maxi;
+    ans = root.val;
+    maxPathSumHelper(root);
+    return ans;
   }
+
 }
