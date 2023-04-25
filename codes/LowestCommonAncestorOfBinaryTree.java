@@ -1,8 +1,8 @@
 public class LowestCommonAncestorOfBinaryTree {
   class TreeNode {
     int val;
-    BinaryTreeMaximumPathSum.TreeNode left;
-    BinaryTreeMaximumPathSum.TreeNode right;
+    TreeNode left;
+    TreeNode right;
   }
   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     if(root == null || root == p || root == q) return root;
