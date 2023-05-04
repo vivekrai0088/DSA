@@ -36,4 +36,9 @@ public class KthLargestElementInArray {
 
     return quickselect(nums, 0, nums.length - 1, nums.length - k);
   }
+
+  public static void main(String[] args) {
+
+    System.out.println(new KthLargestElementInArray().findKthLargest(new int[]{10, 7, 4, 9, 3}, 4));
+  }
 }
