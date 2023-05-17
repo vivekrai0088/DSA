@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+// https://leetcode.com/problems/leaf-similar-trees/description/
 public class LeafSimilarTrees {
   class TreeNode {
     int val;
