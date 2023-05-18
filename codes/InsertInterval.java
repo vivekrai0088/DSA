@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
+// https://leetcode.com/problems/insert-interval/description/
 public class InsertInterval {
   public int[][] insert(int[][] intervals, int[] newInterval) {
     List<int[]> result = new LinkedList<>();
