@@ -1,5 +1,6 @@
 import java.util.TreeMap;
 
+// https://leetcode.com/problems/stock-price-fluctuation/description/
 public class StockPriceFluctuation {
   TreeMap<Integer, Integer> timeseriesMap;
   TreeMap<Integer, Integer> priceCount;
