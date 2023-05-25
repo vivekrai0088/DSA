@@ -4,7 +4,7 @@
 
 import java.util.PriorityQueue;
 
-public class AgodaQuestion {
+public class AgodaQuestion1 {
 
   class Word implements Comparable<Word> {
     String word;
@@ -39,6 +39,6 @@ public class AgodaQuestion {
   }
 
   public static void main(String[] args) {
-    new AgodaQuestion().run();
+    new AgodaQuestion1().run();
   }
 }
